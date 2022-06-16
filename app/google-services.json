@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1035937832514",
+    "project_id": "saathealth-task",
+    "storage_bucket": "saathealth-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035937832514:android:56a0303c54ae7715ebd7db",
+        "android_client_info": {
+          "package_name": "com.example.saathealth_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035937832514-ptaof605uq9o8q6gpo0bgq96kp7saetp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJlkreED27HO1MzWkauIGaVl8ZfhDG1Sc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035937832514-ptaof605uq9o8q6gpo0bgq96kp7saetp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

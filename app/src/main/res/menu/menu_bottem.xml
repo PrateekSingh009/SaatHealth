@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <item
+            android:id="@+id/item0"
+            android:title="Watch"
+            android:icon="@drawable/ic_tv"/>
+
+        <item
+            android:id="@+id/item1"
+            android:title="Awards"
+            android:icon="@drawable/ic_baseline_diamond_24"/>
+
+        <item
+            android:id="@+id/item2"
+            android:title="LogOut"
+            android:icon="@drawable/logout_24"/>
+
+
+
+</menu>

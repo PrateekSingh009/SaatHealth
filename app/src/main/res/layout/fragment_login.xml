@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:fontFamily="@font/spartaneemibold600"
+        android:textSize="26sp"
+        android:id="@+id/tvLogin"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="25dp"
+        android:textColor="@color/theme"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvEmail"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLogin"
+        app:layout_constraintStart_toStartOf="@id/tvLogin"
+        android:layout_centerHorizontal="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/email_img"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_baseline_alternate_email_24"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/etEmailLogin"
+                android:gravity="center_vertical"
+                android:layout_marginStart="9dp"
+                android:background="@null"
+                android:textSize="14sp"
+                android:hint="@string/email_id"
+                android:fontFamily="@font/spartanmedium500"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvPass"
+        app:layout_constraintTop_toBottomOf="@id/cvEmail"
+        app:layout_constraintStart_toStartOf="@id/cvEmail"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/pass_img"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_baseline_lock_24"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/etPassLogin"
+                android:gravity="center_vertical"
+                android:layout_marginStart="9dp"
+                android:background="@null"
+                android:textSize="14sp"
+                android:hint="@string/password"
+                android:fontFamily="@font/spartanmedium500"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        app:layout_constraintTop_toBottomOf="@id/cvPass"
+        app:layout_constraintStart_toStartOf="@id/cvEmail"
+        app:layout_constraintEnd_toEndOf="@id/cvEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/spartanbold700"
+        android:text="@string/login"
+        app:backgroundTint="#0165FF"
+        app:cornerRadius="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/spartanreg"
+            android:text="@string/new_user" />
+
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/spartanmedium500"
+            android:text="@string/register"
+            android:textColor="#0165FF" />
+
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pfLogin"
+        android:visibility="gone"
+        >
+        <include layout="@layout/progress_frame" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
