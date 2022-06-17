@@ -1,5 +1,6 @@
 package com.example.saathealth_task.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.saathealth_task.R
+import com.example.saathealth_task.activity.MainActivity
 import com.example.saathealth_task.model.Users
 import com.example.saathealth_task.model.VideoData
 import com.google.firebase.auth.FirebaseAuth
@@ -43,7 +45,7 @@ class AwardFragment : BaseFragment() {
                     val data = snapshot.getValue(Users::class.java)
                     points.text = data!!.points.toString()
                     level.text = data!!.level.toString()
-                    badge.text = data!!.level.toString()
+                    badge.text = data!!.badge.toString()
                     name.text = data!!.name.toString()
                     email.text = data!!.email.toString()
 
@@ -57,7 +59,13 @@ class AwardFragment : BaseFragment() {
         })
 
 
+
+
     }
+
+
+
+
 
 
 

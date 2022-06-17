@@ -1,6 +1,7 @@
 package com.example.saathealth_task.activity
 
 import android.content.Context
+import android.content.Intent
 import android.content.pm.ActivityInfo
 
 import android.os.Build
@@ -12,6 +13,7 @@ import android.view.WindowManager
 import android.widget.ImageButton
 import android.widget.TextView
 import android.media.AudioManager
+import android.widget.Toast
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
@@ -142,10 +144,12 @@ class PlayerActivity : AppCompatActivity(), AudioManager.OnAudioFocusChangeListe
                 if(snapshot.exists()){
 
                     val data = snapshot.getValue(Users::class.java)
-                    var level : Int = data!!.level
-                    level = level+1
-                    data.level = level
-                    FirebaseDatabase.getInstance().getReference("users").child(auth.currentUser.toString()).setValue(data)
+                    var points : Int = data!!.points
+                    points=points+1
+                    data.points = points
+                    FirebaseDatabase.getInstance().getReference("users").child(auth.currentUser!!.uid).setValue(data).addOnSuccessListener {
+                        Toast.makeText(this@PlayerActivity,"You won a point..!!",Toast.LENGTH_SHORT).show()
+                    }
 
 
                 }
@@ -197,6 +201,12 @@ class PlayerActivity : AppCompatActivity(), AudioManager.OnAudioFocusChangeListe
                 if(playbackState == Player.STATE_ENDED)
                 {
                     incrementLevel()
+                    player.stop()
+
+                    val intent =  Intent(applicationContext, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+
                 }
             }
 

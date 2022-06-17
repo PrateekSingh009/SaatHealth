@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
-
+            android:padding="25dp"
             android:background="@color/black"
             android:src="@drawable/netflix" />
 
@@ -47,7 +47,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
+                android:layout_height="2dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/corner_back"
                 android:backgroundTint="@color/backdark"
@@ -57,9 +57,11 @@
 
         <org.imaginativeworld.whynotimagecarousel.ImageCarousel
             android:id="@+id/carousel"
+            android:layout_margin="2dp"
+
             android:layout_width="match_parent"
             android:layout_height="205dp"
-            android:layout_marginTop="5dp"
+
 
             android:layout_marginBottom="5dp"
             android:background="@color/black"
@@ -114,7 +116,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingLeft="20dp"
@@ -134,7 +136,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
+                android:layout_height="2dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/corner_back"
                 android:backgroundTint="@color/backdark"
@@ -232,27 +234,83 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
+                android:layout_height="2dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/corner_back"
                 android:backgroundTint="@color/backdark"
                 android:gravity="center_horizontal" />
         </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ss"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/av"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/willow"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ca"
+            android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+
+
+
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/awdBtn"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="30dp"
-        android:backgroundTint="@color/LightBlack"
-        android:fontFamily="@font/spartanmedium500"
-        android:src="@drawable/corner_back"
-        android:text="Your Awards"
-        android:textSize="12dp"
+<!--    <Button-->
+<!--        android:id="@+id/awdBtn"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_gravity="bottom|center_horizontal"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:backgroundTint="@color/LightBlack"-->
+<!--        android:fontFamily="@font/spartanmedium500"-->
+<!--        android:src="@drawable/corner_back"-->
+<!--        android:text="My Rewards"-->
+<!--        android:textSize="12dp"-->
 
-        android:textColor="@color/white" />
+<!--        android:textColor="@color/white" />-->
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/awdBtn"
+        android:layout_height="wrap_content"
+        android:text="My rewards"
+        android:fontFamily="@font/autour_one"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        app:backgroundTint="@color/LightBlack"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom|end"
+        app:icon="@drawable/trophy"
+
+         />
+
+
 </FrameLayout>
